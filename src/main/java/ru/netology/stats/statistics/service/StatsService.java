@@ -6,13 +6,19 @@ import java.util.stream.IntStream;
 
 
         public static int sumSalesCalc(int[] sales) {
-            int sum = IntStream.of(sales).sum();
+            int sum = 0;
+            for (int sale : sales) {
+                sum += sale;
+            }
             return sum;
         }
 
         public static int averageOfSalesCalc(int[] sales) {
             int months = sales.length;
-            int sum = IntStream.of(sales).sum();
+            int sum = 0;
+            for (int sale : sales) {
+                sum += sale;
+            }
             int average = sum / sales.length;
             return average;
         }
@@ -43,7 +49,10 @@ import java.util.stream.IntStream;
 
         public static int salesBelowAverageCalc(int[] sales) {
             int months = sales.length;
-            int sum = IntStream.of(sales).sum();
+            int sum = 0;
+            for (int sale : sales) {
+                sum += sale;
+            }
             int average = sum / sales.length;
             int monthCounter = 0;
             for (int i = 0; i < sales.length; i++) {
@@ -56,7 +65,10 @@ import java.util.stream.IntStream;
 
         public static int salesAboveAverageCalc(int[] sales) {
             int months = sales.length;
-            int sum = IntStream.of(sales).sum();
+            int sum = 0;
+            for (int sale : sales) {
+                sum += sale;
+            }
             int average = sum / sales.length;
             int monthCounter = 0;
             for (int i = 0; i < sales.length; i++) {
