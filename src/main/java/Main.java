@@ -7,12 +7,12 @@ public class Main {
     public static void main(int[] args) {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int sumSales = StatsService.sumSalesCalc(sales);
-        int averageSales = StatsService.averageOfSalesCalc(sales);
-        int maxSalesMonth = StatsService.maxSalesCalc(sales);
-        int minSalesMonth = StatsService.minSalesCalc(sales);
-        int salesBelowAverage = StatsService.salesBelowAverageCalc(sales);
-        int salesAboveAverage = StatsService.salesAboveAverageCalc(sales);
+        int sumSales = service.sumSalesCalc(sales);
+        int averageSales = service.averageOfSalesCalc(sales);
+        int maxSalesMonth = service.maxSalesCalc(sales);
+        int minSalesMonth = service.minSalesCalc(sales);
+        int salesBelowAverage = service.salesBelowAverageCalc(sales);
+        int salesAboveAverage = service.salesAboveAverageCalc(sales);
         //System.out.println("Продажи по месяцам " + Arrays.toString(sales));
         System.out.println("Сумма продаж " + sumSales);
         System.out.println("Средняя сумма продаж " + averageSales);

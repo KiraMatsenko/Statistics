@@ -12,8 +12,7 @@ package ru.netology.stats.statistics.service;
         }
 
         public int averageOfSalesCalc(int[] sales) {
-            int sum = StatsService.sumSalesCalc(sales);
-            int months = sales.length;
+            int sum = sumSalesCalc(sales);
             int average = sum / sales.length;
             return average;
         }
@@ -43,7 +42,7 @@ package ru.netology.stats.statistics.service;
         }
 
         public int salesBelowAverageCalc(int[] sales) {
-            int average = StatsService.averageOfSalesCalc(sales);
+            int average = averageOfSalesCalc(sales);
             int monthCounter = 0;
             for (int i = 0; i < sales.length; i++) {
                 if (sales[i] < average) {
@@ -54,7 +53,7 @@ package ru.netology.stats.statistics.service;
         }
 
         public int salesAboveAverageCalc(int[] sales) {
-            int average = StatsService.averageOfSalesCalc(sales);
+            int average = averageOfSalesCalc(sales);
             int monthCounter = 0;
             for (int i = 0; i < sales.length; i++) {
                 if (sales[i] > average) {
