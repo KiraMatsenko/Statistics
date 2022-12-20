@@ -5,6 +5,16 @@ import ru.netology.stats.statistics.service.StatsService;
 public class StatsServiceTest {
 
     @Test
+    public void sumTest() {
+        StatsService service = new StatsService();
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 180;
+        int actual = service.sumSalesCalc(sales);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void testSumSales() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};

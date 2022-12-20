@@ -1,11 +1,9 @@
 package ru.netology.stats.statistics.service;
-import java.util.Arrays;
-import java.util.stream.IntStream;
 
     public class StatsService {
 
 
-        public static int sumSalesCalc(int[] sales) {
+        public int sumSalesCalc(int[] sales) {
             int sum = 0;
             for (int sale : sales) {
                 sum += sale;
@@ -13,14 +11,14 @@ import java.util.stream.IntStream;
             return sum;
         }
 
-        public static int averageOfSalesCalc(int[] sales) {
+        public int averageOfSalesCalc(int[] sales) {
             int sum = StatsService.sumSalesCalc(sales);
             int months = sales.length;
             int average = sum / sales.length;
             return average;
         }
 
-        public static int maxSalesCalc(int[] sales) { //попробуйте через ForEach
+        public int maxSalesCalc(int[] sales) { //попробуйте через ForEach
             int maxMonth = 0;
             int monthCounter = 0;
             for (int mX : sales) {
@@ -32,7 +30,7 @@ import java.util.stream.IntStream;
             return maxMonth + 1;
         }
 
-        public static int minSalesCalc(int[] sales) { //попробуйте через ForEach
+        public int minSalesCalc(int[] sales) { //попробуйте через ForEach
             int minMonth = 0;
             int monthCounter = 0;
             for (int mI : sales) {
@@ -44,7 +42,7 @@ import java.util.stream.IntStream;
             return minMonth + 1;
         }
 
-        public static int salesBelowAverageCalc(int[] sales) {
+        public int salesBelowAverageCalc(int[] sales) {
             int average = StatsService.averageOfSalesCalc(sales);
             int monthCounter = 0;
             for (int i = 0; i < sales.length; i++) {
@@ -55,7 +53,7 @@ import java.util.stream.IntStream;
             return monthCounter;
         }
 
-        public static int salesAboveAverageCalc(int[] sales) {
+        public int salesAboveAverageCalc(int[] sales) {
             int average = StatsService.averageOfSalesCalc(sales);
             int monthCounter = 0;
             for (int i = 0; i < sales.length; i++) {
